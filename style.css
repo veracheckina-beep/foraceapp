@@ -1,0 +1,350 @@
+/* Подключаем шрифт локально (файл нужно положить в папку) */
+@font-face {
+    font-family: 'Hemico Greek';
+    src: url('HemicoGreek.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Hemico Greek', 'Arial Narrow', sans-serif;
+    /* Если шрифт не прогрузится, будет узкий Arial */
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+/* Переменные для темы F1 */
+:root {
+    --pink-accent: #f91260;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-dark: #111111;
+    --card-bg: rgba(20, 20, 20, 0.9);
+}
+
+.app-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+}
+
+/* ----- ШАПКА В СТИЛЕ F1 ----- */
+.header {
+    padding: 20px 16px 10px;
+    position: relative;
+    border-bottom: 2px solid var(--pink-accent);
+}
+
+.flag-strip {
+    height: 8px;
+    background: repeating-linear-gradient(45deg, #000 0px, #000 10px, #fff 10px, #fff 20px);
+    margin-bottom: 15px;
+    border-radius: 0 0 4px 4px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-name {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.team-sub {
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: var(--pink-accent);
+    margin-top: 4px;
+}
+
+.header-badge {
+    margin-top: 16px;
+    background: var(--pink-accent);
+    display: inline-block;
+    padding: 6px 14px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.badge-text {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+/* ----- ОСНОВНОЙ КОНТЕНТ ----- */
+.main-content {
+    flex: 1;
+    padding: 20px 16px;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 20px rgba(249, 18, 96, 0.1);
+}
+
+/* Блок преимуществ */
+.stats-card {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-bottom: 4px solid var(--pink-accent);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 5px var(--pink-accent));
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+.stat-desc {
+    font-size: 11px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* Цитата */
+.quote-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.quote-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pink-accent), transparent);
+}
+
+.quote-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+/* Форма */
+.form-card {
+    border-top: 3px solid var(--pink-accent);
+}
+
+.form-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 6px;
+    color: var(--pink-accent);
+    letter-spacing: 3px;
+}
+
+.form-subtitle {
+    font-size: 12px;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--pink-accent);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--pink-accent);
+    box-shadow: 0 0 10px rgba(249, 18, 96, 0.3);
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+/* Чекбоксы */
+.legal-block {
+    margin: 24px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.checkbox-label input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background: #1a1a1a;
+    border: 2px solid #555;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkbox-label input:checked + .checkmark {
+    background: var(--pink-accent);
+    border-color: var(--pink-accent);
+}
+
+.checkbox-label input:checked + .checkmark::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    left: 3px;
+    top: -1px;
+}
+
+.checkbox-text a {
+    color: var(--pink-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--pink-accent);
+    color: var(--pink-accent);
+    padding: 16px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background: var(--pink-accent);
+    color: black;
+    box-shadow: 0 0 20px var(--pink-accent);
+}
+
+.btn-icon {
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover .btn-icon {
+    transform: translateX(6px);
+}
+
+/* Футер */
+.footer {
+    padding: 20px 16px 30px;
+    margin-top: auto;
+}
+
+.track-lines {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.line {
+    height: 4px;
+    flex: 1;
+}
+
+.line-pink {
+    background: var(--pink-accent);
+    flex: 2;
+}
+
+.line-white {
+    background: white;
+    flex: 1;
+}
+
+.copyright {
+    font-size: 10px;
+    text-align: center;
+    color: #555;
+    letter-spacing: 2px;
+}
