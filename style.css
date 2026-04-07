@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: black;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 32px;
+  color: #f91260;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: #111;
+  border: 1px solid #f91260;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #f91260;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
