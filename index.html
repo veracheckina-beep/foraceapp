@@ -1,28 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>FOREYS | Отбор</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>FOREIS Team · Отбор</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Telegram Web App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
+    <div class="app-container">
+        <!-- Шапка в стиле F1: Стартовая решетка -->
+        <header class="header">
+            <div class="flag-strip"></div>
+            <div class="logo-area">
+                <!-- Если логотип называется logo.png, раскомментируй img -->
+                <!-- <img src="logo.png" alt="FOREIS" class="logo-img"> -->
+                <div class="logo-text">
+                    <span class="team-name">FOREIS</span>
+                    <span class="team-sub">RACING TEAM</span>
+                </div>
+            </div>
+            <div class="header-badge">
+                <span class="badge-text">ДОНАБОР ВО 2-Ю ГРУППУ</span>
+            </div>
+        </header>
 
-<div class="container">
-  <h1 class="logo">FOREYS</h1>
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Карточка преимуществ (Гоночная тематика) -->
+            <div class="stats-card glass-card">
+                <div class="stat-item">
+                    <div class="stat-icon">🏁</div>
+                    <div class="stat-label">БАЗА</div>
+                    <div class="stat-desc">Теория + Практика</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-label">РАСТЯЖКА</div>
+                    <div class="stat-desc">Готовность тела</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🎭</div>
+                    <div class="stat-label">АКТЁРСКОЕ</div>
+                    <div class="stat-desc">Образ и энергия</div>
+                </div>
+            </div>
 
-  <p class="subtitle">ОТБОР В КОМАНДУ</p>
+            <!-- Слоган -->
+            <div class="quote-block">
+                <div class="quote-line"></div>
+                <p class="quote-text">Там, где растут по-настоящему</p>
+                <div class="quote-line"></div>
+            </div>
 
-  <form id="form">
-    <input type="text" placeholder="Имя" id="name" required>
-    <input type="number" placeholder="Возраст" id="age" required>
-    <input type="text" placeholder="Телефон" id="phone" required>
+            <!-- Форма записи -->
+            <div class="form-card glass-card">
+                <h2 class="form-title">ЗАЯВКА НА ОТБОР</h2>
+                <p class="form-subtitle">Заполни форму — мы свяжемся и пригласим на просмотр</p>
 
-    <button type="submit">ОТПРАВИТЬ</button>
-  </form>
-</div>
+                <form id="selectionForm">
+                    <div class="input-group">
+                        <label for="name">Имя и Фамилия</label>
+                        <input type="text" id="name" placeholder="Как в соцсетях" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="inst">Instagram / Telegram</label>
+                        <input type="text" id="inst" placeholder="@username">
+                    </div>
+                    
+                    <!-- Чекбоксы согласий (ссылки пока ведут на заглушки, позже заменишь) -->
+                    <div class="legal-block">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я согласен с <a href="#" id="privacyLink">политикой конфиденциальности</a></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="dataAgree" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Согласие на <a href="#" id="dataLink">обработку данных</a></span>
+                        </label>
+                    </div>
 
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="script.js"></script>
+                    <!-- Кнопка в стиле "СТАРТ" -->
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">ОТПРАВИТЬ ЗАЯВКУ</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </main>
 
+        <!-- Футер с гоночной полосой -->
+        <footer class="footer">
+            <div class="track-lines">
+                <div class="line line-pink"></div>
+                <div class="line line-white"></div>
+                <div class="line line-pink"></div>
+            </div>
+            <p class="copyright">© FOREIS DANCE STUDIO · 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
