@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Отбор в команду · ФОРЕЙС</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="bg-image"></div>
+        <div class="bg-blur"></div>
+        
+        <div class="content">
+            <!-- Шапка -->
+<header class="header">
+    <h1 class="header-title">Отбор в команду</h1>
+    <p class="header-sub">донабор во 2-ю команду студии</p>
+</header>
+
+            <!-- Карточки преимуществ -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏁</div>
+                    <div class="feature-content">
+                        <h3>Танцевальная база</h3>
+                        <p>От теории до практики с тетрадями</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-content">
+                        <h3>Растяжка</h3>
+                        <p>Тело слушается и готово к задачам</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <div class="feature-content">
+                        <h3>Актёрское мастерство</h3>
+                        <p>Образ, характер, энергия на сцене</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма -->
+            <div class="form-card">
+                <h2 class="form-title">Заявка на отбор</h2>
+                <p class="form-subtitle">Заполни форму — мы свяжемся и пригласим на просмотр</p>
+
+                <form id="selectionForm">
+                    <div class="field">
+                        <input type="text" id="name" class="field-input" placeholder="Имя и фамилия" required>
+                    </div>
+                    <div class="field">
+                        <input type="tel" id="phone" class="field-input" placeholder="Номер телефона" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="contact" class="field-input" placeholder="Telegram или VK">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="privacy" required>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Согласен с <a href="#" id="privacyLink">политикой конфиденциальности</a></span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="dataAgree" required>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Согласие на <a href="#" id="dataLink">обработку данных</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Отправить заявку</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </form>
+            </div>
+
+            <footer class="footer">
+                <span>ФОРЕЙС · 2026</span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
